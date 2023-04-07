@@ -1,0 +1,65 @@
+// Program taking decimal value makin its  one's compliment
+function flippingBits(n) {
+    // Write your code here
+    let bin=binary(n);
+    console.log(bin)
+    let fd= flip(bin);
+    let ans =decimal(fd);
+    return ans;
+}
+
+
+// function convering a decimal velue to its equavalent binary numvbar
+function binary(n)
+{
+    let b=[];
+    if(n==0) return b.push(0)
+    while(n>1)
+    {
+       b.push(n%2);
+       n = Math.floor(n/2);
+    }
+    b.push(1);
+    return b;
+}
+
+
+
+// function which makin the compliment of the given binary number
+function flip(bi)
+{
+    let arr=[];
+    for(let i=0;i<32;i++)
+    {
+        arr[i]=1;
+    }
+    
+     for(let i=0;i < bi.length ;i++)
+    {
+        if(bi[i]==1)
+            arr[i]=0;
+        else 
+            arr[i]=1;
+    }
+    return arr;
+}
+
+
+// function which converting the binary number system to decimal number
+function decimal(bi)
+{
+    let dn=0;
+  for(let i=0;i<32;i++)
+  {
+      dn +=  bi[i]*(2**i);
+  }
+  return dn;
+}
+
+
+
+
+
+
+let a=flippingBits(0);
+console.log(a); 
