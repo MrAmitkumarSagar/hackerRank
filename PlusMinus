@@ -1,0 +1,29 @@
+
+// creating a function which take Array as input and count the number of occurence of positive and negetive value in that array
+function plusMinus(arr,n) {
+    // Write your code here
+    var neg=0;
+    var pos=0;
+    var zero=0;
+    for(let x of arr)
+    {
+       
+        if(x >=0)
+        {
+            if(x>0)
+                pos+=1;
+                 
+            else 
+                 zero+=1;  
+        }
+        else 
+          neg+=1;
+          
+    }
+    
+    // printing the avarage of the positive and negetive and zero
+    console.log(pos/n);
+    console.log(neg/n);
+    console.log(zero/n);
+
+}

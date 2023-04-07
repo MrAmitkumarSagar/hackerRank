@@ -1,0 +1,29 @@
+// program that convert the time format from 12 hours format with AM and PM to the 24 hour format 
+function timeConversion(s) {
+    // Write your code here
+  let h1=s[0];
+  let h2=s[1];
+  let m1=s[3];
+  let m2=s[4];
+  let s1=s[6];
+  let s2=s[7];
+  let i=s[8];
+  if(i=="A"){
+      if(12== +(h1+h2))
+      {
+          return s="00"+":"+m1+m2+":"+s1+s2;
+      }
+      
+    return s=h1+h2+":"+m1+m2+":"+s1+s2; 
+  }
+  else if (i=="P"){
+      if(12== +(h1+h2))
+      {
+          return s=12+":"+m1+m2+":"+s1+s2;
+      }
+      
+      return s=(+(h1+h2)+12)+":"+m1+m2+":"+s1+s2; 
+  }
+   return s;
+
+}

@@ -1,0 +1,22 @@
+// program that solve the minimum and maximum sum of the total -1 number in any array
+function miniMaxSum(arr) {
+    // Write your code here
+let sum= 0;
+for(let i in arr)
+{  
+    sum+= arr[i]; 
+}
+let min= minSum(arr, sum);
+let max= maxSum(arr , sum);
+console.log(min, max);
+}
+function maxSum(a,s){
+    let min= Math.min(...a);
+    
+    return s-min;
+}
+function minSum(a,s)
+{
+    let max=Math.max(...a);
+    return s-max;
+}

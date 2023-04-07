@@ -1,0 +1,16 @@
+// A funtion that search the single and lonely integer which is not got repeat again in the array which either a sorted or unsorted
+function lonelyinteger(a) {
+    // Write your code here
+    for(let i=0; i<a.length; i++)
+    {
+        let flag=0;
+        for (let j=0; j<a.length; j++)
+        {
+            if(a[i]==a[j])
+                flag++;
+        }
+        if(flag==1)
+            return a[i];
+    }
+
+}
