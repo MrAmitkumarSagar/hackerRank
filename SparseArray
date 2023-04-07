@@ -1,0 +1,23 @@
+* The function is expected to return an INTEGER_ARRAY.
+ * The function accepts following parameters:
+ *  1. STRING_ARRAY strings
+ *  2. STRING_ARRAY queries
+ */
+ //this program check sr the element of queries array is repeates in how many times in string array and return the output in array form
+
+function matchingStrings(strings, queries) {
+    // Write your code here
+    let res=queries.map((x)=> count(x,strings));
+     return res;
+}
+
+function count(ele ,string)
+{
+    let flag=0;
+        for(let i=0; i<string.length;i++)
+        {
+             if(ele==string[i])
+                flag++;
+         }
+    return flag;
+}
